@@ -1,0 +1,1262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="CHELLAT Ilyes — Digital Project Manager, Media Manager & Cybersecurity Student. Founder of Fluenty." />
+  <meta name="keywords" content="CHELLAT Ilyes, digital creative, media manager, cybersecurity, Fluenty, branding, Algeria" />
+  <meta name="author" content="CHELLAT Ilyes" />
+  <meta property="og:title" content="CHELLAT Ilyes — Digital Creative Professional" />
+  <meta property="og:description" content="Digital Project Manager | Media Manager | Cybersecurity Student" />
+  <meta property="og:type" content="website" />
+  <title>CHELLAT Ilyes — Digital Creative Professional</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+<style>
+/* ============================================================
+   BASE & RESET
+   ============================================================ */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Inter', sans-serif;
+  background: #ffffff;
+  color: #1e293b;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  transition: background 0.4s ease, color 0.4s ease;
+}
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #3b82f6; border-radius: 10px; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
+
+/* ============================================================
+   DARK MODE — driven by hidden checkbox #dark-toggle
+   ============================================================ */
+#dark-toggle { display: none; }
+
+/* All dark-mode rules scoped to :checked state */
+#dark-toggle:checked ~ .site-wrap { background: #0a0f1e; color: #e2e8f0; }
+#dark-toggle:checked ~ .site-wrap .navbar { --nb-bg: rgba(10,15,30,0.85); }
+#dark-toggle:checked ~ .site-wrap .logo-ch { color: #fff; }
+#dark-toggle:checked ~ .site-wrap .logo-ellat { color: #3b82f6; }
+#dark-toggle:checked ~ .site-wrap .logo-ily { color: #64748b; }
+#dark-toggle:checked ~ .site-wrap .nav-link { color: #94a3b8; }
+#dark-toggle:checked ~ .site-wrap .nav-link:hover { color: #3b82f6; }
+#dark-toggle:checked ~ .site-wrap .theme-btn { background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.1); }
+#dark-toggle:checked ~ .site-wrap .menu-btn { background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.1); }
+#dark-toggle:checked ~ .site-wrap .menu-bar-line { background: #e2e8f0; }
+#dark-toggle:checked ~ .site-wrap .hero-grid { background-image: linear-gradient(rgba(59,130,246,0.12) 1px,transparent 1px),linear-gradient(90deg,rgba(59,130,246,0.12) 1px,transparent 1px); }
+#dark-toggle:checked ~ .site-wrap .hero-bg { background: radial-gradient(ellipse 80% 60% at 50% -20%,rgba(59,130,246,0.14) 0%,transparent 70%),radial-gradient(ellipse 60% 60% at 80% 50%,rgba(124,58,237,0.1) 0%,transparent 60%); }
+#dark-toggle:checked ~ .site-wrap .hero-name { color: #fff; }
+#dark-toggle:checked ~ .site-wrap .hero-sub { color: #94a3b8; }
+#dark-toggle:checked ~ .site-wrap .hero-sub strong { color: #e2e8f0; }
+#dark-toggle:checked ~ .site-wrap .btn-secondary { color: #e2e8f0; border-color: rgba(255,255,255,0.12); }
+#dark-toggle:checked ~ .site-wrap .social-btn { background: rgba(255,255,255,0.04); border-color: rgba(255,255,255,0.08); color: #9ca3af; }
+#dark-toggle:checked ~ .site-wrap .glass-chip { background: rgba(15,23,42,0.85); border-color: rgba(255,255,255,0.08); }
+#dark-toggle:checked ~ .site-wrap .glass-chip p { color: #fff; }
+#dark-toggle:checked ~ .site-wrap .glass-chip p + p { color: #94a3b8; }
+#dark-toggle:checked ~ .site-wrap .portrait-card { background: linear-gradient(135deg,#1e293b,#0f172a); border-color: rgba(255,255,255,0.08); }
+#dark-toggle:checked ~ .site-wrap .section-alt { background: #0f172a; }
+#dark-toggle:checked ~ .site-wrap .section-label { background: rgba(59,130,246,0.12); border-color: rgba(59,130,246,0.25); }
+#dark-toggle:checked ~ .site-wrap .section-h2 { color: #fff; }
+#dark-toggle:checked ~ .site-wrap .section-p { color: #94a3b8; }
+#dark-toggle:checked ~ .site-wrap .stat-card { background: rgba(255,255,255,0.03); border-color: rgba(255,255,255,0.06); }
+#dark-toggle:checked ~ .site-wrap .stat-num { color: #fff; }
+#dark-toggle:checked ~ .site-wrap .stat-lbl { color: #94a3b8; }
+#dark-toggle:checked ~ .site-wrap .tag-pill { background: rgba(255,255,255,0.04); border-color: rgba(255,255,255,0.08); color: #94a3b8; }
+#dark-toggle:checked ~ .site-wrap .timeline-line { background: linear-gradient(to bottom,transparent,rgba(59,130,246,0.4) 10%,rgba(59,130,246,0.4) 90%,transparent); }
+#dark-toggle:checked ~ .site-wrap .timeline-dot { border-color: #0f172a; }
+#dark-toggle:checked ~ .site-wrap .timeline-card { background: rgba(255,255,255,0.025); border-color: rgba(255,255,255,0.06); }
+#dark-toggle:checked ~ .site-wrap .tl-role { color: #fff; }
+#dark-toggle:checked ~ .site-wrap .tl-period { color: #64748b; }
+#dark-toggle:checked ~ .site-wrap .tl-desc { color: #94a3b8; }
+#dark-toggle:checked ~ .site-wrap .skill-tag { background: rgba(255,255,255,0.04); border-color: rgba(255,255,255,0.08); color: #94a3b8; }
+#dark-toggle:checked ~ .site-wrap .service-card { background: rgba(255,255,255,0.03); border-color: rgba(255,255,255,0.06); }
+#dark-toggle:checked ~ .site-wrap .svc-title { color: #fff; }
+#dark-toggle:checked ~ .site-wrap .svc-desc { color: #94a3b8; }
+#dark-toggle:checked ~ .site-wrap .fluenty-stat { background: rgba(255,255,255,0.03); border-color: rgba(255,255,255,0.06); }
+#dark-toggle:checked ~ .site-wrap .fluenty-stat-lbl { color: #94a3b8; }
+#dark-toggle:checked ~ .site-wrap .ig-btn { background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.1); }
+#dark-toggle:checked ~ .site-wrap .skill-cat-card { background: rgba(255,255,255,0.025); border-color: rgba(255,255,255,0.06); }
+#dark-toggle:checked ~ .site-wrap .skill-label { color: #e2e8f0; }
+#dark-toggle:checked ~ .site-wrap .skill-pct { color: #64748b; }
+#dark-toggle:checked ~ .site-wrap .skill-track { background: rgba(255,255,255,0.07); }
+#dark-toggle:checked ~ .site-wrap .cat-title { color: #fff; }
+#dark-toggle:checked ~ .site-wrap .floating-tag { background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.1); color: #94a3b8; }
+#dark-toggle:checked ~ .site-wrap .achievement-card { background: rgba(255,255,255,0.025); border-color: rgba(255,255,255,0.06); }
+#dark-toggle:checked ~ .site-wrap .ach-title { color: #fff; }
+#dark-toggle:checked ~ .site-wrap .ach-desc { color: #94a3b8; }
+#dark-toggle:checked ~ .site-wrap .edu-card { background: rgba(255,255,255,0.025); border-color: rgba(255,255,255,0.06); }
+#dark-toggle:checked ~ .site-wrap .edu-title { color: #fff; }
+#dark-toggle:checked ~ .site-wrap .edu-desc { color: #94a3b8; }
+#dark-toggle:checked ~ .site-wrap .edu-period { color: #64748b; }
+#dark-toggle:checked ~ .site-wrap .contact-method { background: rgba(255,255,255,0.03); border-color: rgba(255,255,255,0.06); }
+#dark-toggle:checked ~ .site-wrap .cm-label { color: #64748b; }
+#dark-toggle:checked ~ .site-wrap .cm-value { color: #e2e8f0; }
+#dark-toggle:checked ~ .site-wrap .contact-form-card { background: rgba(255,255,255,0.03); border-color: rgba(255,255,255,0.08); }
+#dark-toggle:checked ~ .site-wrap .form-title { color: #fff; }
+#dark-toggle:checked ~ .site-wrap .form-label { color: #64748b; }
+#dark-toggle:checked ~ .site-wrap .form-input { background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.1); color: #e2e8f0; }
+#dark-toggle:checked ~ .site-wrap .footer { border-color: rgba(255,255,255,0.05); }
+#dark-toggle:checked ~ .site-wrap .footer-name { color: #fff; }
+#dark-toggle:checked ~ .site-wrap .footer-sub { color: #64748b; }
+#dark-toggle:checked ~ .site-wrap .footer-copy { color: #334155; }
+#dark-toggle:checked ~ .site-wrap .social-btn-sm { background: rgba(255,255,255,0.04); border-color: rgba(255,255,255,0.08); color: #9ca3af; }
+/* Dark mode icon switching */
+#dark-toggle:checked ~ .site-wrap .icon-moon { display: none; }
+#dark-toggle:checked ~ .site-wrap .icon-sun { display: block; }
+.icon-sun { display: none; }
+.icon-moon { display: block; }
+
+/* ============================================================
+   SITE WRAP
+   ============================================================ */
+.site-wrap {
+  min-height: 100vh;
+  background: #ffffff;
+  color: #1e293b;
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+/* ============================================================
+   NAVBAR
+   ============================================================ */
+.navbar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  padding: 0 2rem;
+  transition: background 0.4s ease, backdrop-filter 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+  box-shadow: 0 2px 20px rgba(0,0,0,0.04);
+}
+.navbar-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+}
+.logo { text-decoration: none; font-family: 'Space Grotesk', sans-serif; font-size: 17px; font-weight: 700; letter-spacing: -0.02em; }
+.logo-ch { color: #1e293b; transition: color 0.4s; }
+.logo-ellat { color: #3b82f6; }
+.logo-ily { color: #94a3b8; font-size: 13px; font-weight: 400; margin-left: 4px; transition: color 0.3s; }
+.logo:hover .logo-ily { color: #3b82f6; }
+
+.nav-links { display: flex; align-items: center; gap: 2rem; list-style: none; }
+.nav-link { font-family: 'Inter', sans-serif; font-size: 13.5px; font-weight: 500; color: #64748b; text-decoration: none; letter-spacing: 0.01em; transition: color 0.2s; }
+.nav-link:hover { color: #3b82f6; }
+
+.nav-controls { display: flex; align-items: center; gap: 10px; }
+
+/* Theme button — label for the checkbox */
+.theme-btn {
+  display: flex; align-items: center; justify-content: center;
+  width: 38px; height: 38px; border-radius: 12px;
+  background: #f1f5f9; border: 1px solid #e2e8f0;
+  cursor: pointer; transition: all 0.2s;
+  color: #475569;
+}
+.theme-btn:hover { background: #e2e8f0; }
+.theme-btn svg { width: 17px; height: 17px; }
+
+/* Mobile menu checkbox + label */
+#menu-toggle-cb { display: none; }
+.menu-btn {
+  display: none;
+  align-items: center; justify-content: center;
+  width: 38px; height: 38px; border-radius: 12px;
+  background: #f1f5f9; border: 1px solid #e2e8f0;
+  cursor: pointer; transition: all 0.2s; flex-direction: column; gap: 4px; padding: 10px;
+}
+.menu-bar-line {
+  display: block; height: 2px; width: 100%; border-radius: 2px;
+  background: #475569; transition: all 0.3s ease; transform-origin: center;
+}
+#menu-toggle-cb:checked ~ .site-wrap .menu-btn .menu-bar-line:nth-child(1) { transform: rotate(45deg) translate(4px,4px); }
+#menu-toggle-cb:checked ~ .site-wrap .menu-btn .menu-bar-line:nth-child(2) { opacity: 0; }
+#menu-toggle-cb:checked ~ .site-wrap .menu-btn .menu-bar-line:nth-child(3) { transform: rotate(-45deg) translate(4px,-4px); }
+
+/* Mobile menu */
+.mobile-nav {
+  display: none;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.45s cubic-bezier(0.4,0,0.2,1);
+  background: rgba(255,255,255,0.97);
+  backdrop-filter: blur(20px);
+  border-top: 1px solid #f1f5f9;
+}
+#menu-toggle-cb:checked ~ .site-wrap .mobile-nav { max-height: 400px; }
+#dark-toggle:checked ~ .site-wrap .mobile-nav { background: rgba(10,15,30,0.97); border-color: rgba(255,255,255,0.05); }
+.mobile-nav-inner { max-width: 1280px; margin: 0 auto; padding: 1.5rem 2rem; display: flex; flex-direction: column; gap: 4px; }
+.mobile-nav-link { display: block; font-family: 'Inter', sans-serif; font-size: 15px; font-weight: 500; color: #475569; text-decoration: none; padding: 10px 0; border-bottom: 1px solid #f8fafc; transition: color 0.2s; }
+.mobile-nav-link:hover { color: #3b82f6; }
+#dark-toggle:checked ~ .site-wrap .mobile-nav-link { color: #94a3b8; border-color: rgba(255,255,255,0.04); }
+#dark-toggle:checked ~ .site-wrap .mobile-nav-link:hover { color: #3b82f6; }
+
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  .menu-btn { display: flex; }
+  .mobile-nav { display: block; }
+  .navbar { padding: 0 1.25rem; }
+}
+
+/* ============================================================
+   HERO SECTION
+   ============================================================ */
+.hero {
+  min-height: 100vh;
+  display: flex; align-items: center;
+  position: relative; overflow: hidden;
+  padding-top: 72px;
+}
+.hero-bg {
+  position: absolute; inset: 0; pointer-events: none;
+  background: radial-gradient(ellipse 80% 60% at 50% -20%, rgba(59,130,246,0.07) 0%, transparent 70%),
+              radial-gradient(ellipse 60% 60% at 80% 50%, rgba(124,58,237,0.05) 0%, transparent 60%);
+  transition: background 0.4s;
+}
+.hero-grid {
+  position: absolute; inset: 0; pointer-events: none;
+  background-image: linear-gradient(rgba(59,130,246,0.07) 1px,transparent 1px),linear-gradient(90deg,rgba(59,130,246,0.07) 1px,transparent 1px);
+  background-size: 60px 60px;
+  mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 40%, transparent 100%);
+  opacity: 0.5;
+  transition: all 0.4s;
+}
+.orb {
+  position: absolute; border-radius: 50%; filter: blur(80px); pointer-events: none;
+}
+.orb-1 { width: 600px; height: 600px; background: radial-gradient(circle,rgba(59,130,246,0.13) 0%,transparent 70%); top: -200px; right: -100px; animation: floatOrb 12s ease-in-out infinite; }
+.orb-2 { width: 400px; height: 400px; background: radial-gradient(circle,rgba(124,58,237,0.11) 0%,transparent 70%); bottom: 0; left: -100px; animation: floatOrb 15s ease-in-out infinite reverse; }
+.orb-3 { width: 300px; height: 300px; background: radial-gradient(circle,rgba(6,182,212,0.09) 0%,transparent 70%); top: 40%; left: 40%; animation: floatOrb 18s ease-in-out infinite; }
+@keyframes floatOrb {
+  0%,100% { transform: translate(0,0) scale(1); }
+  33% { transform: translate(30px,-30px) scale(1.05); }
+  66% { transform: translate(-20px,20px) scale(0.97); }
+}
+.hero-inner {
+  position: relative; z-index: 2;
+  max-width: 1280px; margin: 0 auto; padding: 5rem 2rem;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;
+}
+@media (max-width: 1024px) { .hero-inner { grid-template-columns: 1fr; padding: 4rem 1.25rem; } }
+
+/* Hero text stagger */
+.hero-badge, .hero-name-wrap, .hero-sub, .hero-ctas, .hero-socials {
+  opacity: 0;
+  animation: heroReveal 0.75s ease forwards;
+}
+.hero-badge { animation-delay: 0.15s; }
+.hero-name-wrap { animation-delay: 0.28s; }
+.hero-sub { animation-delay: 0.40s; }
+.hero-ctas { animation-delay: 0.52s; }
+.hero-socials { animation-delay: 0.64s; }
+@keyframes heroReveal {
+  to { opacity: 1; transform: translateY(0); }
+  from { opacity: 0; transform: translateY(22px); }
+}
+
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 6px 14px; border-radius: 100px;
+  background: rgba(59,130,246,0.08); border: 1px solid rgba(59,130,246,0.2);
+  font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 500;
+  letter-spacing: 0.13em; text-transform: uppercase; color: #3b82f6;
+  margin-bottom: 2rem;
+}
+.badge-dot { width: 7px; height: 7px; border-radius: 50%; background: #4ade80; animation: pulse 3s ease infinite; }
+@keyframes pulse { 0%,100% { opacity:1; transform:scale(1); } 50% { opacity:0.6; transform:scale(0.85); } }
+
+.hero-name { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: clamp(3rem,7vw,5.5rem); line-height: 1.05; letter-spacing: -0.03em; margin-bottom: 1.5rem; }
+.hero-name-line1.hero-name { color: #1e293b; transition: color 0.4s; }
+#dark-toggle:checked ~ .site-wrap .hero-name-line1 { color: #fff; }
+.gradient-text {
+  background: linear-gradient(135deg, #3b82f6 0%, #7c3aed 50%, #06b6d4 100%);
+  background-size: 200% 200%;
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+  animation: gradShift 6s ease infinite;
+}
+@keyframes gradShift { 0%,100% { background-position:0% 50%; } 50% { background-position:100% 50%; } }
+
+.hero-sub { font-family: 'Inter', sans-serif; font-size: 16px; line-height: 1.75; color: #64748b; max-width: 480px; margin-bottom: 2.5rem; transition: color 0.4s; }
+.hero-sub strong { color: #374151; font-weight: 600; transition: color 0.4s; }
+
+.hero-ctas { display: flex; flex-wrap: wrap; gap: 14px; margin-bottom: 3rem; }
+
+/* Buttons */
+.btn-primary {
+  display: inline-flex; align-items: center;
+  padding: 13px 26px; border-radius: 13px;
+  background: linear-gradient(135deg, #3b82f6, #7c3aed);
+  color: #fff; font-family: 'Space Grotesk', sans-serif; font-size: 14px; font-weight: 500;
+  text-decoration: none; border: none; cursor: pointer;
+  box-shadow: 0 4px 20px rgba(59,130,246,0.3);
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  position: relative; overflow: hidden;
+}
+.btn-primary::after { content:''; position:absolute; inset:0; background:rgba(255,255,255,0); transition:background 0.2s; }
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 32px rgba(59,130,246,0.42); }
+.btn-primary:hover::after { background:rgba(255,255,255,0.06); }
+.btn-primary svg { margin-left: 8px; width: 15px; height: 15px; transition: transform 0.2s; }
+.btn-primary:hover svg { transform: translateX(3px); }
+
+.btn-secondary {
+  display: inline-flex; align-items: center;
+  padding: 13px 26px; border-radius: 13px;
+  background: transparent; color: #374151;
+  font-family: 'Space Grotesk', sans-serif; font-size: 14px; font-weight: 500;
+  text-decoration: none; border: 1.5px solid #e2e8f0;
+  transition: all 0.2s ease;
+}
+.btn-secondary:hover { border-color: #3b82f6; color: #3b82f6; background: rgba(59,130,246,0.04); transform: translateY(-2px); }
+.btn-secondary svg { margin-left: 8px; width: 15px; height: 15px; transition: transform 0.2s; }
+.btn-secondary:hover svg { transform: translateY(3px); }
+
+.hero-socials { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.socials-label { font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: #94a3b8; margin-right: 4px; }
+.social-btn {
+  display: flex; align-items: center; justify-content: center;
+  width: 38px; height: 38px; border-radius: 10px;
+  background: #f1f5f9; border: 1px solid #e2e8f0;
+  color: #64748b; text-decoration: none;
+  transition: all 0.2s ease;
+}
+.social-btn:hover { color: #3b82f6; background: rgba(59,130,246,0.07); border-color: rgba(59,130,246,0.25); transform: translateY(-2px); }
+.social-btn svg { width: 17px; height: 17px; }
+#dark-toggle:checked ~ .site-wrap .social-btn:hover { color: #60a5fa; }
+
+/* Hero portrait */
+.hero-portrait-col { display: flex; justify-content: center; align-items: center; }
+@media (max-width: 1024px) { .hero-portrait-col { display: none; } }
+.portrait-wrap { position: relative; animation: heroReveal 0.9s 0.3s ease both; }
+.portrait-glow { position: absolute; inset: -12px; border-radius: 28px; background: linear-gradient(135deg,rgba(59,130,246,0.22),rgba(124,58,237,0.15),transparent); filter: blur(30px); animation: glowPulse 5s ease infinite; z-index: 0; }
+@keyframes glowPulse { 0%,100% { opacity:0.7; } 50% { opacity:1; } }
+.portrait-card {
+  position: relative; z-index: 1;
+  width: 320px; height: 400px; border-radius: 28px; overflow: hidden;
+  background: linear-gradient(135deg, #f0f4ff, #e8ecf5);
+  border: 1px solid rgba(59,130,246,0.12);
+  box-shadow: 0 24px 60px rgba(0,0,0,0.08);
+  display: flex; flex-direction: column; align-items: center; justify-content: flex-end; padding: 2rem;
+  transition: background 0.4s, border-color 0.4s;
+}
+.portrait-pattern {
+  position: absolute; inset: 0;
+  background-image: linear-gradient(45deg,rgba(59,130,246,0.15) 25%,transparent 25%), linear-gradient(-45deg,rgba(124,58,237,0.12) 25%,transparent 25%);
+  background-size: 22px 22px; opacity: 0.3;
+}
+.portrait-avatar {
+  position: absolute; top: 48px; left: 50%; transform: translateX(-50%);
+  width: 130px; height: 130px; border-radius: 50%;
+  background: linear-gradient(135deg,rgba(59,130,246,0.35),rgba(124,58,237,0.3));
+  border: 2px solid rgba(255,255,255,0.35);
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Space Grotesk', sans-serif; font-size: 42px; font-weight: 700;
+  color: rgba(255,255,255,0.7);
+}
+.portrait-overlay {
+  position: absolute; bottom: 0; left: 0; right: 0; height: 55%;
+  background: linear-gradient(to top,rgba(15,23,42,0.75),transparent);
+  z-index: 1;
+}
+.portrait-info { position: relative; z-index: 2; text-align: center; }
+.portrait-name { font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 18px; color: #fff; }
+.portrait-role { font-family: 'Inter', sans-serif; font-size: 13px; color: rgba(255,255,255,0.72); margin-top: 3px; }
+
+/* Floating chips */
+.chip {
+  position: absolute; z-index: 3;
+  background: rgba(255,255,255,0.92); backdrop-filter: blur(14px);
+  border: 1px solid rgba(255,255,255,0.85);
+  box-shadow: 0 8px 28px rgba(0,0,0,0.09);
+  border-radius: 14px; padding: 10px 14px;
+}
+.chip-left { left: -50px; top: 60px; animation: chipFloat 6s ease-in-out infinite; }
+.chip-right { right: -50px; bottom: 90px; animation: chipFloat 6s 1s ease-in-out infinite; }
+@keyframes chipFloat { 0%,100% { transform:translateY(0); } 50% { transform:translateY(-10px); } }
+.chip-name { font-family: 'Space Grotesk', sans-serif; font-size: 12px; font-weight: 600; color: #1e293b; }
+.chip-role { font-family: 'Inter', sans-serif; font-size: 10px; color: #64748b; margin-top: 1px; }
+#dark-toggle:checked ~ .site-wrap .chip { background: rgba(15,23,42,0.9); border-color: rgba(255,255,255,0.08); }
+#dark-toggle:checked ~ .site-wrap .chip-name { color: #fff; }
+#dark-toggle:checked ~ .site-wrap .chip-role { color: #94a3b8; }
+
+/* Scroll indicator */
+.scroll-hint {
+  position: absolute; bottom: 2.5rem; left: 50%; transform: translateX(-50%);
+  display: flex; flex-direction: column; align-items: center; gap: 6px;
+  opacity: 0.35; animation: scrollBob 2s ease-in-out infinite;
+}
+@keyframes scrollBob { 0%,100% { transform:translateX(-50%) translateY(0); } 50% { transform:translateX(-50%) translateY(5px); } }
+.scroll-hint span { font-family: 'Inter', sans-serif; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: #94a3b8; }
+.scroll-hint svg { width: 15px; height: 15px; color: #94a3b8; }
+
+/* ============================================================
+   SECTION COMMONS
+   ============================================================ */
+section { position: relative; overflow: hidden; }
+.sec-inner { max-width: 1280px; margin: 0 auto; padding: 7rem 2rem; }
+@media (max-width: 768px) { .sec-inner { padding: 5rem 1.25rem; } }
+.section-alt { background: #f8fafc; transition: background 0.4s; }
+.section-label {
+  display: inline-block; font-family: 'Inter', sans-serif; font-size: 10.5px; font-weight: 500;
+  letter-spacing: 0.15em; text-transform: uppercase; color: #3b82f6;
+  background: rgba(59,130,246,0.07); border: 1px solid rgba(59,130,246,0.18);
+  padding: 5px 12px; border-radius: 100px; margin-bottom: 1.25rem;
+  transition: background 0.4s, border-color 0.4s;
+}
+.section-h2 { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: clamp(2rem,4.5vw,3rem); line-height: 1.12; letter-spacing: -0.025em; color: #1e293b; transition: color 0.4s; }
+.section-p { font-family: 'Inter', sans-serif; font-size: 15.5px; line-height: 1.75; color: #64748b; transition: color 0.4s; }
+
+/* Scroll-triggered reveal via CSS animation-timeline (progressive enhancement) */
+.reveal-up {
+  opacity: 0;
+  animation: revealUp 0.7s ease forwards;
+  animation-play-state: paused;
+  animation-timeline: view();
+  animation-range: entry 0% entry 25%;
+}
+@keyframes revealUp {
+  from { opacity:0; transform:translateY(28px); }
+  to   { opacity:1; transform:translateY(0); }
+}
+/* Fallback for browsers without animation-timeline */
+@supports not (animation-timeline: view()) {
+  .reveal-up { opacity: 1; animation: none; }
+}
+
+/* ============================================================
+   ABOUT
+   ============================================================ */
+.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+@media (max-width: 1024px) { .about-grid { grid-template-columns: 1fr; gap: 3rem; } }
+.stats-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+.stat-card {
+  padding: 28px 24px; border-radius: 20px;
+  background: #fff; border: 1px solid #f1f5f9;
+  box-shadow: 0 2px 14px rgba(0,0,0,0.04);
+  transition: transform 0.3s, box-shadow 0.3s, background 0.4s, border-color 0.4s;
+}
+.stat-card:hover { transform: translateY(-4px); box-shadow: 0 14px 40px rgba(0,0,0,0.07); }
+.stat-icon {
+  width: 40px; height: 40px; border-radius: 12px;
+  background: rgba(59,130,246,0.09); display: flex; align-items: center; justify-content: center; color: #3b82f6;
+}
+.stat-icon.vi { background: rgba(124,58,237,0.09); color: #7c3aed; }
+.stat-num { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 2.4rem; color: #1e293b; margin-top: 14px; line-height: 1; transition: color 0.4s; }
+.stat-lbl { font-family: 'Inter', sans-serif; font-size: 13px; color: #64748b; margin-top: 5px; transition: color 0.4s; }
+.about-text { display: flex; flex-direction: column; gap: 1.25rem; }
+.tag-pills { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 1.5rem; }
+.tag-pill {
+  font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 500;
+  padding: 6px 14px; border-radius: 100px;
+  background: #f8fafc; border: 1px solid #e2e8f0; color: #64748b;
+  transition: all 0.2s;
+}
+.tag-pill:hover { background: rgba(59,130,246,0.06); border-color: rgba(59,130,246,0.2); color: #3b82f6; }
+
+/* ============================================================
+   EXPERIENCE TIMELINE
+   ============================================================ */
+.exp-header { max-width: 520px; margin-bottom: 4rem; }
+.timeline { position: relative; padding-left: 36px; display: flex; flex-direction: column; gap: 0; }
+.timeline::before {
+  content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 1px;
+  background: linear-gradient(to bottom, transparent, #3b82f6 8%, #3b82f6 92%, transparent);
+}
+#dark-toggle:checked ~ .site-wrap .timeline::before { background: linear-gradient(to bottom,transparent,rgba(59,130,246,0.4) 8%,rgba(59,130,246,0.4) 92%,transparent); }
+.tl-item { position: relative; padding-bottom: 2.5rem; }
+.tl-item:last-child { padding-bottom: 0; }
+.tl-dot {
+  position: absolute; left: -42px; top: 26px;
+  width: 13px; height: 13px; border-radius: 50%;
+  background: #3b82f6; border: 2.5px solid #f8fafc;
+  box-shadow: 0 0 0 3px rgba(59,130,246,0.18);
+  transition: border-color 0.4s;
+}
+#dark-toggle:checked ~ .site-wrap .tl-dot { border-color: #0f172a; }
+.timeline-card {
+  padding: 26px 30px; border-radius: 20px;
+  background: #fff; border: 1px solid #f1f5f9;
+  box-shadow: 0 2px 14px rgba(0,0,0,0.03);
+  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s, background 0.4s;
+}
+.timeline-card:hover { transform: translateX(5px); box-shadow: 0 8px 32px rgba(0,0,0,0.07); border-color: rgba(59,130,246,0.15); }
+.tl-head { display: flex; align-items: flex-start; justify-content: space-between; flex-wrap: wrap; gap: 10px; margin-bottom: 14px; }
+.tl-badge-current {
+  display: inline-block; font-family: 'Inter', sans-serif; font-size: 10px; font-weight: 600;
+  letter-spacing: 0.1em; text-transform: uppercase; padding: 3px 10px; border-radius: 100px;
+  background: rgba(16,185,129,0.08); color: #10b981; border: 1px solid rgba(16,185,129,0.2); margin-bottom: 8px;
+}
+.tl-role { font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 18px; color: #1e293b; transition: color 0.4s; }
+.tl-company { font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 500; color: #3b82f6; margin-top: 2px; }
+.tl-period { font-family: 'Inter', sans-serif; font-size: 11px; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.08em; transition: color 0.4s; }
+.tl-desc { font-family: 'Inter', sans-serif; font-size: 14px; line-height: 1.7; color: #64748b; margin-bottom: 14px; transition: color 0.4s; }
+.skill-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.skill-tag {
+  font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 500;
+  padding: 4px 10px; border-radius: 6px;
+  background: #f8fafc; border: 1px solid #e2e8f0; color: #64748b;
+  transition: background 0.4s, border-color 0.4s, color 0.4s;
+}
+
+/* ============================================================
+   FLUENTY
+   ============================================================ */
+.fluenty-header { max-width: 640px; margin: 0 auto 3.5rem; text-align: center; }
+.fluenty-stats { display: grid; grid-template-columns: repeat(4,1fr); gap: 1.25rem; margin-bottom: 3.5rem; }
+@media (max-width: 768px) { .fluenty-stats { grid-template-columns: repeat(2,1fr); } }
+.fluenty-stat {
+  padding: 26px 20px; border-radius: 18px; text-align: center;
+  background: #fff; border: 1px solid #f1f5f9;
+  box-shadow: 0 2px 14px rgba(0,0,0,0.04);
+  transition: transform 0.3s, background 0.4s, border-color 0.4s;
+}
+.fluenty-stat:hover { transform: translateY(-4px); }
+.fluenty-stat-num { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 2rem; background: linear-gradient(135deg,#3b82f6,#7c3aed); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
+.fluenty-stat-lbl { font-family: 'Inter', sans-serif; font-size: 12.5px; color: #64748b; margin-top: 4px; transition: color 0.4s; }
+.services-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.25rem; margin-bottom: 3rem; }
+@media (max-width: 1024px) { .services-grid { grid-template-columns: repeat(2,1fr); } }
+@media (max-width: 640px) { .services-grid { grid-template-columns: 1fr; } }
+.service-card {
+  padding: 30px; border-radius: 20px;
+  background: #fff; border: 1px solid #f1f5f9;
+  box-shadow: 0 2px 14px rgba(0,0,0,0.04);
+  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s, background 0.4s;
+}
+.service-card:hover { transform: translateY(-6px); box-shadow: 0 20px 50px rgba(0,0,0,0.08); border-color: rgba(59,130,246,0.18); }
+.svc-icon {
+  width: 44px; height: 44px; border-radius: 12px;
+  background: rgba(59,130,246,0.09); display: flex; align-items: center; justify-content: center; color: #3b82f6;
+}
+.svc-icon.vi { background: rgba(124,58,237,0.09); color: #7c3aed; }
+.svc-icon.cy { background: rgba(6,182,212,0.09); color: #06b6d4; }
+.svc-title { font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 16px; color: #1e293b; margin-top: 18px; margin-bottom: 8px; transition: color 0.4s; }
+.svc-desc { font-family: 'Inter', sans-serif; font-size: 13.5px; line-height: 1.65; color: #64748b; transition: color 0.4s; }
+.ig-btn {
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 14px 26px; border-radius: 18px;
+  background: #1e293b; border: 1px solid transparent;
+  color: #fff; font-family: 'Space Grotesk', sans-serif; font-size: 14px; font-weight: 500;
+  text-decoration: none; transition: all 0.25s;
+}
+.ig-btn:hover { background: #0f172a; transform: translateY(-2px); box-shadow: 0 8px 28px rgba(0,0,0,0.16); }
+.ig-btn svg { width: 17px; height: 17px; }
+.ig-arrow { margin-left: 2px; transition: transform 0.2s; }
+.ig-btn:hover .ig-arrow { transform: translate(2px,-2px); }
+.fluenty-cta { text-align: center; }
+
+/* ============================================================
+   SKILLS
+   ============================================================ */
+.skills-header { max-width: 520px; margin-bottom: 4rem; }
+.skills-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.25rem; }
+@media (max-width: 1024px) { .skills-grid { grid-template-columns: repeat(2,1fr); } }
+@media (max-width: 640px) { .skills-grid { grid-template-columns: 1fr; } }
+.skill-cat-card {
+  padding: 30px; border-radius: 20px;
+  background: #fff; border: 1px solid #f1f5f9;
+  box-shadow: 0 2px 14px rgba(0,0,0,0.04);
+  transition: transform 0.3s, box-shadow 0.3s, background 0.4s, border-color 0.4s;
+}
+.skill-cat-card:hover { transform: translateY(-4px); box-shadow: 0 14px 40px rgba(0,0,0,0.07); }
+.skill-cat-card.span2 { grid-column: span 2; }
+@media (max-width: 640px) { .skill-cat-card.span2 { grid-column: span 1; } }
+.cat-head { display: flex; align-items: center; gap: 12px; margin-bottom: 1.5rem; }
+.cat-icon {
+  width: 36px; height: 36px; border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+}
+.cat-icon.bl { background: rgba(59,130,246,0.09); color: #3b82f6; }
+.cat-icon.vi { background: rgba(124,58,237,0.09); color: #7c3aed; }
+.cat-icon.cy { background: rgba(6,182,212,0.09); color: #06b6d4; }
+.cat-icon.ro { background: rgba(244,63,94,0.09); color: #f43f5e; }
+.cat-icon.am { background: rgba(245,158,11,0.09); color: #f59e0b; }
+.cat-title { font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 15px; color: #1e293b; transition: color 0.4s; }
+.skill-bars { display: flex; flex-direction: column; gap: 16px; }
+.skill-bar-item {}
+.skill-bar-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; }
+.skill-label { font-family: 'Inter', sans-serif; font-size: 13px; color: #475569; transition: color 0.4s; }
+.skill-pct { font-family: 'Inter', sans-serif; font-size: 11px; color: #94a3b8; transition: color 0.4s; }
+.skill-track { height: 5px; border-radius: 100px; background: #f1f5f9; overflow: hidden; transition: background 0.4s; }
+.skill-fill {
+  height: 100%; border-radius: 100px;
+  background: linear-gradient(90deg,#3b82f6,#60a5fa);
+  animation: fillBar 1.4s cubic-bezier(0.16,1,0.3,1) forwards;
+  animation-play-state: paused;
+  animation-timeline: view();
+  animation-range: entry 0% entry 30%;
+}
+.skill-fill.vi { background: linear-gradient(90deg,#7c3aed,#a78bfa); }
+.skill-fill.cy { background: linear-gradient(90deg,#06b6d4,#67e8f9); }
+@keyframes fillBar {
+  from { width: 0%; }
+}
+/* Specific widths for each bar */
+.w95 { --tw: 95%; animation-name: fillTo95; }
+.w88 { --tw: 88%; animation-name: fillTo88; }
+.w90 { --tw: 90%; animation-name: fillTo90; }
+.w75 { --tw: 75%; animation-name: fillTo75; }
+.w82 { --tw: 82%; animation-name: fillTo82; }
+.w80 { --tw: 80%; animation-name: fillTo80; }
+.w70 { --tw: 70%; animation-name: fillTo70; }
+.w92 { --tw: 92%; animation-name: fillTo92; }
+.w85 { --tw: 85%; animation-name: fillTo85; }
+@keyframes fillTo95 { from{width:0} to{width:95%} }
+@keyframes fillTo88 { from{width:0} to{width:88%} }
+@keyframes fillTo90 { from{width:0} to{width:90%} }
+@keyframes fillTo75 { from{width:0} to{width:75%} }
+@keyframes fillTo82 { from{width:0} to{width:82%} }
+@keyframes fillTo80 { from{width:0} to{width:80%} }
+@keyframes fillTo70 { from{width:0} to{width:70%} }
+@keyframes fillTo92 { from{width:0} to{width:92%} }
+@keyframes fillTo85 { from{width:0} to{width:85%} }
+
+/* Fallback for browsers without animation-timeline */
+@supports not (animation-timeline: view()) {
+  .skill-fill { animation-play-state: running; animation-timeline: auto; }
+  .reveal-up { opacity: 1; animation: none; }
+}
+
+.floating-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+.floating-tag {
+  font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 500;
+  padding: 6px 14px; border-radius: 100px;
+  background: #f8fafc; border: 1px solid #e2e8f0; color: #64748b;
+  transition: all 0.2s;
+}
+.floating-tag:hover { transform: translateY(-2px); background: rgba(59,130,246,0.06); border-color: rgba(59,130,246,0.22); color: #3b82f6; }
+.floating-tag.tool:hover { background: rgba(245,158,11,0.07); border-color: rgba(245,158,11,0.22); color: #f59e0b; }
+
+/* ============================================================
+   ACHIEVEMENTS
+   ============================================================ */
+.ach-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 1.5rem; margin-top: 4rem; }
+@media (max-width: 768px) { .ach-grid { grid-template-columns: 1fr; } }
+.achievement-card {
+  padding: 34px; border-radius: 24px;
+  background: #fff; border: 1px solid #f1f5f9;
+  box-shadow: 0 2px 14px rgba(0,0,0,0.04);
+  display: flex; gap: 20px; align-items: flex-start;
+  transition: transform 0.3s, box-shadow 0.3s, background 0.4s, border-color 0.4s;
+}
+.achievement-card:hover { transform: translateY(-4px); box-shadow: 0 20px 50px rgba(0,0,0,0.08); }
+.ach-icon-wrap {
+  width: 60px; height: 60px; flex-shrink: 0; border-radius: 16px;
+  display: flex; align-items: center; justify-content: center;
+}
+.ach-icon-wrap.gold { background: rgba(251,191,36,0.08); border: 1px solid rgba(251,191,36,0.15); }
+.ach-icon-wrap.blue { background: rgba(59,130,246,0.08); border: 1px solid rgba(59,130,246,0.15); }
+.ach-eyebrow { font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 0.13em; text-transform: uppercase; margin-bottom: 6px; }
+.ach-eyebrow.gold { color: #f59e0b; }
+.ach-eyebrow.blue { color: #3b82f6; }
+.ach-title { font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 18px; color: #1e293b; margin-bottom: 8px; transition: color 0.4s; }
+.ach-desc { font-family: 'Inter', sans-serif; font-size: 13.5px; line-height: 1.68; color: #64748b; transition: color 0.4s; }
+
+/* ============================================================
+   EDUCATION
+   ============================================================ */
+.edu-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 1.5rem; margin-top: 4rem; }
+@media (max-width: 768px) { .edu-grid { grid-template-columns: 1fr; } }
+.edu-card {
+  padding: 34px; border-radius: 24px; position: relative; overflow: hidden;
+  background: #fff; border: 1px solid #f1f5f9;
+  box-shadow: 0 2px 14px rgba(0,0,0,0.04);
+  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s, background 0.4s;
+}
+.edu-card::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+  background: linear-gradient(90deg,#3b82f6,#7c3aed);
+  opacity: 0; transition: opacity 0.3s;
+}
+.edu-card:hover { transform: translateY(-4px); box-shadow: 0 20px 50px rgba(0,0,0,0.08); border-color: rgba(59,130,246,0.18); }
+.edu-card:hover::before { opacity: 1; }
+.edu-badge {
+  display: inline-block; font-family: 'Inter', sans-serif; font-size: 10px; font-weight: 600;
+  letter-spacing: 0.1em; text-transform: uppercase; padding: 3px 10px; border-radius: 100px;
+  background: rgba(59,130,246,0.08); color: #3b82f6; border: 1px solid rgba(59,130,246,0.2);
+  margin-bottom: 1rem;
+}
+.edu-icon {
+  width: 48px; height: 48px; border-radius: 14px;
+  display: flex; align-items: center; justify-content: center; margin-bottom: 1.25rem;
+}
+.edu-icon.bl { background: rgba(59,130,246,0.1); }
+.edu-icon.vi { background: rgba(124,58,237,0.1); }
+.edu-title { font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 19px; color: #1e293b; margin-bottom: 4px; transition: color 0.4s; }
+.edu-sub { font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 500; color: #3b82f6; margin-bottom: 8px; }
+.edu-sub.vi { color: #7c3aed; }
+.edu-period { font-family: 'Inter', sans-serif; font-size: 11px; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 14px; transition: color 0.4s; }
+.edu-desc { font-family: 'Inter', sans-serif; font-size: 13.5px; line-height: 1.68; color: #64748b; transition: color 0.4s; }
+
+/* ============================================================
+   CONTACT
+   ============================================================ */
+.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; }
+@media (max-width: 1024px) { .contact-grid { grid-template-columns: 1fr; gap: 3rem; } }
+.contact-methods { display: flex; flex-direction: column; gap: 14px; margin-top: 3rem; }
+.contact-method {
+  display: flex; align-items: center; gap: 16px;
+  padding: 18px 22px; border-radius: 16px;
+  background: #fff; border: 1px solid #f1f5f9;
+  text-decoration: none;
+  box-shadow: 0 1px 8px rgba(0,0,0,0.03);
+  transition: transform 0.2s, border-color 0.2s, background 0.4s;
+}
+.contact-method:hover { transform: translateX(4px); border-color: rgba(59,130,246,0.2); }
+.cm-icon {
+  width: 44px; height: 44px; flex-shrink: 0; border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+}
+.cm-icon.bl { background: rgba(59,130,246,0.09); color: #3b82f6; }
+.cm-icon.gr { background: rgba(16,185,129,0.09); color: #10b981; }
+.cm-label { font-family: 'Inter', sans-serif; font-size: 11px; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.09em; margin-bottom: 2px; transition: color 0.4s; }
+.cm-value { font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 500; color: #374151; transition: color 0.3s; }
+.contact-method:hover .cm-value { color: #3b82f6; }
+.cm-arrow { margin-left: auto; color: #d1d5db; transition: color 0.2s, transform 0.2s; flex-shrink: 0; }
+.contact-method:hover .cm-arrow { color: #3b82f6; transform: translateX(3px); }
+.contact-form-card {
+  padding: 38px; border-radius: 24px;
+  background: #fff; border: 1px solid #f1f5f9;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.06);
+  transition: background 0.4s, border-color 0.4s, box-shadow 0.4s;
+}
+.form-title { font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 19px; color: #1e293b; margin-bottom: 2rem; transition: color 0.4s; }
+.form-group { margin-bottom: 1.25rem; }
+.form-label { display: block; font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.12em; color: #94a3b8; margin-bottom: 8px; transition: color 0.4s; }
+.form-input {
+  width: 100%; padding: 13px 15px; border-radius: 12px;
+  background: #f8fafc; border: 1.5px solid #e2e8f0;
+  font-family: 'Inter', sans-serif; font-size: 14px; color: #1e293b;
+  outline: none; transition: border-color 0.2s, background 0.2s, box-shadow 0.2s, color 0.4s;
+  resize: none;
+}
+.form-input::placeholder { color: #94a3b8; }
+.form-input:focus { border-color: #3b82f6; background: #fff; box-shadow: 0 0 0 4px rgba(59,130,246,0.08); }
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.footer {
+  padding: 3rem 2rem;
+  border-top: 1px solid #f1f5f9;
+  transition: border-color 0.4s;
+}
+.footer-inner { max-width: 1280px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1.5rem; }
+.footer-brand {}
+.footer-name { font-family: 'Space Grotesk', sans-serif; font-size: 14px; font-weight: 600; color: #1e293b; transition: color 0.4s; }
+.footer-sub { font-family: 'Inter', sans-serif; font-size: 12px; color: #94a3b8; margin-top: 3px; transition: color 0.4s; }
+.footer-socials { display: flex; gap: 10px; }
+.social-btn-sm {
+  display: flex; align-items: center; justify-content: center;
+  width: 34px; height: 34px; border-radius: 9px;
+  background: #f1f5f9; border: 1px solid #e2e8f0;
+  color: #94a3b8; text-decoration: none;
+  transition: all 0.2s;
+}
+.social-btn-sm:hover { color: #3b82f6; background: rgba(59,130,246,0.07); border-color: rgba(59,130,246,0.22); transform: translateY(-2px); }
+.social-btn-sm svg { width: 15px; height: 15px; }
+.footer-copy { font-family: 'Inter', sans-serif; font-size: 12px; color: #cbd5e1; transition: color 0.4s; }
+
+/* ============================================================
+   ORBs for other sections
+   ============================================================ */
+.orb-sec { position: absolute; border-radius: 50%; filter: blur(90px); pointer-events: none; }
+.orb-a { width:450px;height:450px;background:radial-gradient(circle,rgba(124,58,237,0.09) 0%,transparent 70%);top:-100px;left:50%;animation:floatOrb 14s ease-in-out infinite; }
+.orb-b { width:380px;height:380px;background:radial-gradient(circle,rgba(59,130,246,0.09) 0%,transparent 70%);bottom:-80px;right:-60px;animation:floatOrb 16s ease-in-out infinite reverse; }
+.orb-c { width:500px;height:500px;background:radial-gradient(circle,rgba(59,130,246,0.07) 0%,transparent 70%);top:-160px;right:-100px;animation:floatOrb 18s ease-in-out infinite; }
+</style>
+</head>
+
+<!-- Dark toggle + menu toggle BEFORE site-wrap so CSS sibling selectors work -->
+<input type="checkbox" id="dark-toggle" />
+<input type="checkbox" id="menu-toggle-cb" />
+
+<div class="site-wrap">
+
+  <!-- ===================== NAVBAR ===================== -->
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <a href="#hero" class="logo">
+        <span class="logo-ch">CH</span><span class="logo-ellat">ELLAT</span><span class="logo-ily">Ilyes</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#fluenty" class="nav-link">Fluenty</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-controls">
+        <label for="dark-toggle" class="theme-btn" aria-label="Toggle theme">
+          <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        </label>
+        <label for="menu-toggle-cb" class="menu-btn" aria-label="Menu">
+          <span class="menu-bar-line"></span>
+          <span class="menu-bar-line"></span>
+          <span class="menu-bar-line"></span>
+        </label>
+      </div>
+    </div>
+    <!-- Mobile menu -->
+    <div class="mobile-nav">
+      <div class="mobile-nav-inner">
+        <a href="#about" class="mobile-nav-link">About</a>
+        <a href="#experience" class="mobile-nav-link">Experience</a>
+        <a href="#fluenty" class="mobile-nav-link">Fluenty</a>
+        <a href="#skills" class="mobile-nav-link">Skills</a>
+        <a href="#achievements" class="mobile-nav-link">Achievements</a>
+        <a href="#education" class="mobile-nav-link">Education</a>
+        <a href="#contact" class="mobile-nav-link">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===================== HERO ===================== -->
+  <section id="hero" class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-grid"></div>
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+    <div class="hero-inner">
+      <!-- Text -->
+      <div>
+        <div class="hero-badge"><span class="badge-dot"></span>Available for Projects</div>
+        <h1>
+          <div class="hero-name hero-name-line1 hero-name-wrap">CHELLAT</div>
+          <div class="hero-name gradient-text hero-name-wrap" style="animation-delay:.08s">Ilyes</div>
+        </h1>
+        <p class="hero-sub">
+          Digital Project Manager &mdash; Media Manager &mdash; Cybersecurity Student.<br/>
+          <strong>Founder of Fluenty.</strong> Building brands, systems, and digital experiences that move.
+        </p>
+        <div class="hero-ctas">
+          <a href="#contact" class="btn-primary">Contact Me <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
+          <a href="#fluenty" class="btn-secondary">View Projects <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg></a>
+        </div>
+        <div class="hero-socials">
+          <span class="socials-label">Follow</span>
+          <a href="#" class="social-btn" aria-label="Instagram"><svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+          <a href="#" class="social-btn" aria-label="LinkedIn"><svg fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+          <a href="#" class="social-btn" aria-label="GitHub"><svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a>
+          <a href="#" class="social-btn" aria-label="Behance"><svg fill="currentColor" viewBox="0 0 24 24"><path d="M6.938 4.503c.702 0 1.34.06 1.92.188.577.13 1.07.33 1.485.61.41.28.733.65.96 1.12.225.47.34 1.05.34 1.73 0 .74-.17 1.36-.507 1.86-.338.5-.837.9-1.502 1.22.906.26 1.576.72 2.022 1.37.448.66.665 1.45.665 2.36 0 .75-.13 1.39-.41 1.93-.28.55-.67 1-1.16 1.35-.49.36-1.05.62-1.69.78-.63.17-1.29.25-1.96.25H0V4.51h6.938v-.007zm-.412 5.58c.585 0 1.058-.14 1.42-.42.36-.28.54-.72.54-1.31 0-.33-.06-.6-.18-.82-.12-.22-.29-.39-.5-.53-.21-.12-.44-.2-.71-.25-.26-.04-.53-.06-.82-.06H3.59v3.39h2.936zm.19 5.81c.32 0 .62-.03.9-.09s.52-.17.73-.32c.21-.15.38-.36.5-.62.12-.26.18-.6.18-1.01 0-.81-.23-1.39-.68-1.73-.46-.34-1.06-.51-1.82-.51H3.59v4.28h3.126zm9.783.27c.35.34.86.51 1.51.51.47 0 .87-.12 1.21-.35.34-.24.55-.49.63-.76h2.56c-.41 1.27-1.04 2.18-1.89 2.73-.85.55-1.88.82-3.09.82-.84 0-1.6-.13-2.28-.41-.68-.27-1.26-.66-1.73-1.16-.47-.5-.83-1.1-1.08-1.8-.25-.69-.38-1.46-.38-2.29 0-.8.13-1.55.39-2.24.26-.69.62-1.28 1.09-1.78.47-.5 1.04-.88 1.71-1.16.67-.28 1.41-.42 2.23-.42.91 0 1.71.18 2.38.52.67.35 1.22.82 1.65 1.41.43.59.74 1.27.93 2.04.19.77.25 1.58.18 2.43h-7.63c.04.74.26 1.29.61 1.62zm2.65-5.57c-.28-.31-.72-.46-1.32-.46-.38 0-.7.06-.96.19-.26.13-.47.29-.63.49-.16.2-.27.41-.33.63-.06.22-.1.43-.1.62h3.92c-.09-.64-.29-1.16-.58-1.47zM15.17 6.77h5.42v1.31h-5.42V6.77z"/></svg></a>
+          <a href="#" class="social-btn" aria-label="Facebook"><svg fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+        </div>
+      </div>
+      <!-- Portrait -->
+      <div class="hero-portrait-col">
+        <div class="portrait-wrap">
+          <div class="portrait-glow"></div>
+          <div class="portrait-card">
+            <div class="portrait-pattern"></div>
+            <div class="portrait-avatar">CI</div>
+            <div class="portrait-overlay"></div>
+            <div class="portrait-info">
+              <div class="portrait-name">CHELLAT Ilyes</div>
+              <div class="portrait-role">Digital Creative Professional</div>
+            </div>
+          </div>
+          <div class="chip chip-left">
+            <div class="chip-name">Fluenty</div>
+            <div class="chip-role">Founder</div>
+          </div>
+          <div class="chip chip-right">
+            <div class="chip-name">15+</div>
+            <div class="chip-role">Pages Managed</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-hint" aria-hidden="true">
+      <span>Scroll</span>
+      <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 5v14M5 12l7 7 7-7"/></svg>
+    </div>
+  </section>
+
+  <!-- ===================== ABOUT ===================== -->
+  <section id="about">
+    <div class="sec-inner">
+      <div class="about-grid">
+        <!-- Stats -->
+        <div class="reveal-up stats-grid">
+          <div class="stat-card" style="grid-column:span 2">
+            <div class="stat-icon"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+            <div class="stat-num">15+</div>
+            <div class="stat-lbl">Social Pages Managed</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+            <div class="stat-num">4+</div>
+            <div class="stat-lbl">Years Freelancing</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+            <div class="stat-num">1st</div>
+            <div class="stat-lbl">WorldSkills Competitor</div>
+          </div>
+          <div class="stat-card" style="grid-column:span 2">
+            <div class="stat-icon vi"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18"/></svg></div>
+            <div class="stat-num">3+</div>
+            <div class="stat-lbl">Active Projects</div>
+          </div>
+        </div>
+        <!-- Text -->
+        <div class="reveal-up about-text">
+          <div class="section-label">About</div>
+          <h2 class="section-h2">Where creativity<br/>meets precision.</h2>
+          <p class="section-p">I am a digital creative professional with a dual identity — technical enough to architect secure systems, creative enough to build brands that connect. Currently pursuing a Higher Technician Diploma in Cybersecurity while running an active freelance practice.</p>
+          <p class="section-p">As the founder of <strong style="color:#3b82f6;font-weight:600">Fluenty</strong>, I am developing a new kind of digital creative practice that combines modern branding, social media systems, and digital media production into a cohesive offering for brands and agencies.</p>
+          <p class="section-p">My work spans cybersecurity, creative direction, motion design, content strategy, and digital marketing — a cross-discipline fluency that lets me approach problems from angles others miss.</p>
+          <div class="tag-pills">
+            <span class="tag-pill">Creative Direction</span>
+            <span class="tag-pill">Digital Branding</span>
+            <span class="tag-pill">Media Management</span>
+            <span class="tag-pill">Cybersecurity</span>
+            <span class="tag-pill">Social Strategy</span>
+            <span class="tag-pill">Motion Design</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== EXPERIENCE ===================== -->
+  <section id="experience" class="section-alt">
+    <div class="orb-sec orb-a"></div>
+    <div class="sec-inner">
+      <div class="exp-header reveal-up">
+        <div class="section-label">Experience</div>
+        <h2 class="section-h2">The work that<br/>shaped me.</h2>
+      </div>
+      <div class="timeline">
+        <!-- 1 -->
+        <div class="tl-item reveal-up">
+          <div class="tl-dot"></div>
+          <div class="timeline-card">
+            <div class="tl-head">
+              <div><span class="tl-badge-current">Current</span><div class="tl-role">Digital Project Manager</div><div class="tl-company">Fluenty</div></div>
+              <div class="tl-period">2024 — Present</div>
+            </div>
+            <p class="tl-desc">Founded and lead Fluenty as a digital creative project focused on branding, social media systems, and advertising content. Oversee strategy, production, and client relationships across multiple active campaigns.</p>
+            <div class="skill-tags"><span class="skill-tag">Brand Strategy</span><span class="skill-tag">Project Management</span><span class="skill-tag">Content Systems</span><span class="skill-tag">Creative Direction</span></div>
+          </div>
+        </div>
+        <!-- 2 -->
+        <div class="tl-item reveal-up">
+          <div class="tl-dot"></div>
+          <div class="timeline-card">
+            <div class="tl-head">
+              <div><div class="tl-role">Media Manager</div><div class="tl-company">Al-Bayt Al-Saeed Foundation</div></div>
+              <div class="tl-period">2023 — 2024</div>
+            </div>
+            <p class="tl-desc">Managed full media operations including visual production, social media presence, community events coverage, and editorial direction. Built a cohesive visual identity across all communications.</p>
+            <div class="skill-tags"><span class="skill-tag">Media Production</span><span class="skill-tag">Visual Identity</span><span class="skill-tag">Community Events</span><span class="skill-tag">Editorial</span></div>
+          </div>
+        </div>
+        <!-- 3 -->
+        <div class="tl-item reveal-up">
+          <div class="tl-dot"></div>
+          <div class="timeline-card">
+            <div class="tl-head">
+              <div><div class="tl-role">Social Media Manager</div><div class="tl-company">Zahra Mall — Freelance</div></div>
+              <div class="tl-period">2023</div>
+            </div>
+            <p class="tl-desc">Developed and executed a comprehensive social media strategy for a commercial mall. Created promotional content, campaigns, and handled community engagement with measurable growth in organic reach.</p>
+            <div class="skill-tags"><span class="skill-tag">Social Strategy</span><span class="skill-tag">Content Creation</span><span class="skill-tag">Campaign Management</span></div>
+          </div>
+        </div>
+        <!-- 4 -->
+        <div class="tl-item reveal-up">
+          <div class="tl-dot"></div>
+          <div class="timeline-card">
+            <div class="tl-head">
+              <div><div class="tl-role">Freelance Media Creator</div><div class="tl-company">Independent — Multiple Clients</div></div>
+              <div class="tl-period">2021 — Present</div>
+            </div>
+            <p class="tl-desc">Delivered graphic design, video editing, branding, and social media management across 15+ commercial pages. Specialized in Reels, advertising visuals, logo design, and brand system development.</p>
+            <div class="skill-tags"><span class="skill-tag">Graphic Design</span><span class="skill-tag">Video Editing</span><span class="skill-tag">Branding</span><span class="skill-tag">Advertising</span></div>
+          </div>
+        </div>
+        <!-- 5 -->
+        <div class="tl-item reveal-up">
+          <div class="tl-dot"></div>
+          <div class="timeline-card">
+            <div class="tl-head">
+              <div><div class="tl-role">Sales Assistant</div><div class="tl-company">Commercial Retail</div></div>
+              <div class="tl-period">2020 — 2021</div>
+            </div>
+            <p class="tl-desc">Developed client-facing communication skills, sales techniques, and commercial awareness. Built early foundations in customer experience and retail operations.</p>
+            <div class="skill-tags"><span class="skill-tag">Client Relations</span><span class="skill-tag">Sales</span><span class="skill-tag">Communication</span></div>
+          </div>
+        </div>
+        <!-- 6 -->
+        <div class="tl-item reveal-up">
+          <div class="tl-dot"></div>
+          <div class="timeline-card">
+            <div class="tl-head">
+              <div><div class="tl-role">Shop Manager</div><div class="tl-company">Independent Retail</div></div>
+              <div class="tl-period">2020</div>
+            </div>
+            <p class="tl-desc">Managed day-to-day retail operations, inventory, vendor relationships, and staff coordination. Gained hands-on business management and operational leadership experience.</p>
+            <div class="skill-tags"><span class="skill-tag">Operations</span><span class="skill-tag">Team Coordination</span><span class="skill-tag">Inventory</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FLUENTY ===================== -->
+  <section id="fluenty">
+    <div class="orb-sec orb-b"></div>
+    <div class="sec-inner">
+      <div class="fluenty-header reveal-up">
+        <div class="section-label">Featured Project</div>
+        <h2 class="section-h2" style="font-size:clamp(2.6rem,6vw,4rem)"><span class="gradient-text">Fluenty</span></h2>
+        <p class="section-p" style="margin-top:1rem">A modern digital creative practice. Branding, educational content, social media systems, advertising visuals, and digital experiences — all under one vision.</p>
+      </div>
+      <div class="fluenty-stats reveal-up">
+        <div class="fluenty-stat"><div class="fluenty-stat-num">15+</div><div class="fluenty-stat-lbl">Active Clients</div></div>
+        <div class="fluenty-stat"><div class="fluenty-stat-num">50+</div><div class="fluenty-stat-lbl">Projects Delivered</div></div>
+        <div class="fluenty-stat"><div class="fluenty-stat-num">100+</div><div class="fluenty-stat-lbl">Content Pieces</div></div>
+        <div class="fluenty-stat"><div class="fluenty-stat-num">4yr</div><div class="fluenty-stat-lbl">Years Active</div></div>
+      </div>
+      <div class="services-grid">
+        <div class="service-card reveal-up">
+          <div class="svc-icon"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg></div>
+          <div class="svc-title">Brand Identity</div>
+          <div class="svc-desc">Complete visual systems — logos, color palettes, typography, guidelines, and collateral that make brands unforgettable.</div>
+        </div>
+        <div class="service-card reveal-up">
+          <div class="svc-icon vi"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="4"/><path d="M7 8h10M7 12h6M7 16h4"/></svg></div>
+          <div class="svc-title">Social Media Systems</div>
+          <div class="svc-desc">End-to-end social strategies with content calendars, design templates, Reels production, and analytics-driven iteration.</div>
+        </div>
+        <div class="service-card reveal-up">
+          <div class="svc-icon cy"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M15 10l4.553-2.069A1 1 0 0121 8.87v6.26a1 1 0 01-1.447.899L15 14M3 8a2 2 0 012-2h10a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2V8z"/></svg></div>
+          <div class="svc-title">Video &amp; Motion</div>
+          <div class="svc-desc">Short-form video editing, Reels, ad creatives, event coverage, and animated graphics optimized for each platform.</div>
+        </div>
+        <div class="service-card reveal-up">
+          <div class="svc-icon"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
+          <div class="svc-title">Advertising Visuals</div>
+          <div class="svc-desc">High-converting ad creatives for Meta, Instagram, and TikTok campaigns — designed to capture attention and drive action.</div>
+        </div>
+        <div class="service-card reveal-up">
+          <div class="svc-icon vi"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 20h9M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
+          <div class="svc-title">Educational Content</div>
+          <div class="svc-desc">Structured digital learning materials, carousel infographics, and knowledge-sharing content for thought-leading brands.</div>
+        </div>
+        <div class="service-card reveal-up">
+          <div class="svc-icon cy"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 010 14.14M4.93 4.93a10 10 0 000 14.14"/></svg></div>
+          <div class="svc-title">Digital Experiences</div>
+          <div class="svc-desc">Interactive digital products, web presences, and creative marketing activations that create lasting impressions.</div>
+        </div>
+      </div>
+      <div class="fluenty-cta reveal-up">
+        <a href="#" class="ig-btn">
+          <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+          Follow Fluenty on Instagram
+          <svg class="ig-arrow" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M7 17L17 7M7 7h10v10"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SKILLS ===================== -->
+  <section id="skills" class="section-alt">
+    <div class="sec-inner">
+      <div class="skills-header reveal-up">
+        <div class="section-label">Skills</div>
+        <h2 class="section-h2">Tools of<br/>the trade.</h2>
+      </div>
+      <div class="skills-grid">
+        <!-- Creative -->
+        <div class="skill-cat-card reveal-up">
+          <div class="cat-head"><div class="cat-icon bl"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg></div><div class="cat-title">Creative</div></div>
+          <div class="skill-bars">
+            <div class="skill-bar-item"><div class="skill-bar-top"><span class="skill-label">Graphic Design</span><span class="skill-pct">95%</span></div><div class="skill-track"><div class="skill-fill w95"></div></div></div>
+            <div class="skill-bar-item"><div class="skill-bar-top"><span class="skill-label">Video Editing</span><span class="skill-pct">88%</span></div><div class="skill-track"><div class="skill-fill w88"></div></div></div>
+            <div class="skill-bar-item"><div class="skill-bar-top"><span class="skill-label">Brand Identity</span><span class="skill-pct">90%</span></div><div class="skill-track"><div class="skill-fill w90"></div></div></div>
+            <div class="skill-bar-item"><div class="skill-bar-top"><span class="skill-label">Motion Graphics</span><span class="skill-pct">75%</span></div><div class="skill-track"><div class="skill-fill w75"></div></div></div>
+          </div>
+        </div>
+        <!-- Technical -->
+        <div class="skill-cat-card reveal-up">
+          <div class="cat-head"><div class="cat-icon vi"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div><div class="cat-title">Technical</div></div>
+          <div class="skill-bars">
+            <div class="skill-bar-item"><div class="skill-bar-top"><span class="skill-label">Linux Administration</span><span class="skill-pct">82%</span></div><div class="skill-track"><div class="skill-fill vi w82"></div></div></div>
+            <div class="skill-bar-item"><div class="skill-bar-top"><span class="skill-label">Networking</span><span class="skill-pct">80%</span></div><div class="skill-track"><div class="skill-fill vi w80"></div></div></div>
+            <div class="skill-bar-item"><div class="skill-bar-top"><span class="skill-label">Web Development</span><span class="skill-pct">70%</span></div><div class="skill-track"><div class="skill-fill vi w70"></div></div></div>
+            <div class="skill-bar-item"><div class="skill-bar-top"><span class="skill-label">Virtualization</span><span class="skill-pct">75%</span></div><div class="skill-track"><div class="skill-fill vi w75"></div></div></div>
+          </div>
+        </div>
+        <!-- Marketing -->
+        <div class="skill-cat-card reveal-up">
+          <div class="cat-head"><div class="cat-icon cy"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 20V10M12 20V4M6 20v-6"/></svg></div><div class="cat-title">Marketing</div></div>
+          <div class="skill-bars">
+            <div class="skill-bar-item"><div class="skill-bar-top"><span class="skill-label">Social Media Strategy</span><span class="skill-pct">92%</span></div><div class="skill-track"><div class="skill-fill cy w92"></div></div></div>
+            <div class="skill-bar-item"><div class="skill-bar-top"><span class="skill-label">Content Marketing</span><span class="skill-pct">88%</span></div><div class="skill-track"><div class="skill-fill cy w88"></div></div></div>
+            <div class="skill-bar-item"><div class="skill-bar-top"><span class="skill-label">Ad Creative</span><span class="skill-pct">85%</span></div><div class="skill-track"><div class="skill-fill cy w85"></div></div></div>
+            <div class="skill-bar-item"><div class="skill-bar-top"><span class="skill-label">Community Management</span><span class="skill-pct">80%</span></div><div class="skill-track"><div class="skill-fill cy w80"></div></div></div>
+          </div>
+        </div>
+        <!-- Cybersecurity -->
+        <div class="skill-cat-card reveal-up">
+          <div class="cat-head"><div class="cat-icon ro"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><div class="cat-title">Cybersecurity</div></div>
+          <div class="floating-tags">
+            <span class="floating-tag">Network Security</span><span class="floating-tag">Linux Hardening</span><span class="floating-tag">SSH Security</span><span class="floating-tag">Pentesting Basics</span><span class="floating-tag">Firewall Config</span><span class="floating-tag">VPN / WLAN</span><span class="floating-tag">Windows Server</span><span class="floating-tag">CIS Benchmark</span>
+          </div>
+        </div>
+        <!-- Tools -->
+        <div class="skill-cat-card span2 reveal-up">
+          <div class="cat-head"><div class="cat-icon am"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg></div><div class="cat-title">Tools &amp; Software</div></div>
+          <div class="floating-tags">
+            <span class="floating-tag tool">Adobe Photoshop</span><span class="floating-tag tool">Adobe Illustrator</span><span class="floating-tag tool">Figma</span><span class="floating-tag tool">Canva Pro</span><span class="floating-tag tool">CapCut</span><span class="floating-tag tool">Premiere Pro</span><span class="floating-tag tool">After Effects</span><span class="floating-tag tool">VS Code</span><span class="floating-tag tool">Git / GitHub</span><span class="floating-tag tool">Linux Terminal</span><span class="floating-tag tool">Notion</span><span class="floating-tag tool">Meta Business Suite</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ACHIEVEMENTS ===================== -->
+  <section id="achievements">
+    <div class="orb-sec orb-c"></div>
+    <div class="sec-inner">
+      <div class="reveal-up">
+        <div class="section-label">Achievements</div>
+        <h2 class="section-h2">Recognized<br/>excellence.</h2>
+      </div>
+      <div class="ach-grid">
+        <div class="achievement-card reveal-up">
+          <div class="ach-icon-wrap gold">
+            <svg width="28" height="28" fill="rgba(251,191,36,.15)" stroke="rgb(251,191,36)" stroke-width="1.5" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <div>
+            <div class="ach-eyebrow gold">WorldSkills Competition</div>
+            <div class="ach-title">Cybersecurity — Constantine</div>
+            <p class="ach-desc">Competed in the national WorldSkills Cybersecurity competition held in Constantine, Algeria. Demonstrated advanced technical skills across network security, system hardening, and threat mitigation challenges against top competitors nationwide.</p>
+            <div class="skill-tags" style="margin-top:14px"><span class="skill-tag">Network Security</span><span class="skill-tag">System Hardening</span><span class="skill-tag">National Level</span></div>
+          </div>
+        </div>
+        <div class="achievement-card reveal-up">
+          <div class="ach-icon-wrap blue">
+            <svg width="28" height="28" fill="rgba(59,130,246,.12)" stroke="rgb(59,130,246)" stroke-width="1.5" viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+          </div>
+          <div>
+            <div class="ach-eyebrow blue">Entrepreneurship</div>
+            <div class="ach-title">Founded Fluenty</div>
+            <p class="ach-desc">Self-initiated and launched Fluenty as an independent digital creative project, growing it from a personal brand into a multi-client practice managing 15+ social media pages and producing creative work at scale across Algeria.</p>
+            <div class="skill-tags" style="margin-top:14px"><span class="skill-tag">Entrepreneurship</span><span class="skill-tag">Scale</span><span class="skill-tag">Self-started</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== EDUCATION ===================== -->
+  <section id="education" class="section-alt">
+    <div class="sec-inner">
+      <div class="reveal-up">
+        <div class="section-label">Education</div>
+        <h2 class="section-h2">Academic<br/>foundation.</h2>
+      </div>
+      <div class="edu-grid">
+        <div class="edu-card reveal-up">
+          <div class="edu-badge">Current</div>
+          <div class="edu-icon bl"><svg width="22" height="22" fill="none" stroke="#3b82f6" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+          <div class="edu-title">Higher Technician Diploma</div>
+          <div class="edu-sub">Cybersecurity &amp; Network Administration</div>
+          <div class="edu-period">2023 — Present</div>
+          <p class="edu-desc">Advanced technical training in network security, Linux/Windows system administration, switching and routing, WLAN, virtualization, and penetration testing fundamentals.</p>
+        </div>
+        <div class="edu-card reveal-up">
+          <div class="edu-icon vi"><svg width="22" height="22" fill="none" stroke="#7c3aed" stroke-width="2" viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div>
+          <div class="edu-title">Baccalaureate</div>
+          <div class="edu-sub vi">Mathematics</div>
+          <div class="edu-period">Completed 2023</div>
+          <p class="edu-desc">Completed the national Baccalaureate examination with a specialization in Mathematics, demonstrating strong analytical reasoning and problem-solving foundations throughout the curriculum.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CONTACT ===================== -->
+  <section id="contact">
+    <div class="orb-sec orb-b" style="top:-100px;right:-80px;bottom:auto"></div>
+    <div class="sec-inner">
+      <div class="contact-grid">
+        <!-- Left -->
+        <div class="reveal-up">
+          <div class="section-label">Contact</div>
+          <h2 class="section-h2">Let's build<br/>something great.</h2>
+          <p class="section-p" style="margin-top:1.25rem;max-width:400px">Available for freelance projects, collaborations, and full-time opportunities. Whether it's a brand, a campaign, or a digital product — reach out.</p>
+          <div class="contact-methods">
+            <a href="mailto:ilyes.chellat@icloud.com" class="contact-method">
+              <div class="cm-icon bl"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+              <div><div class="cm-label">Email</div><div class="cm-value">ilyes.chellat@icloud.com</div></div>
+              <svg class="cm-arrow" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M7 17L17 7M7 7h10v10"/></svg>
+            </a>
+            <a href="#" class="contact-method">
+              <div class="cm-icon gr"><svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></div>
+              <div><div class="cm-label">WhatsApp</div><div class="cm-value">Message on WhatsApp</div></div>
+              <svg class="cm-arrow" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M7 17L17 7M7 7h10v10"/></svg>
+            </a>
+          </div>
+        </div>
+        <!-- Form -->
+        <div class="contact-form-card reveal-up">
+          <div class="form-title">Send a message</div>
+          <div class="form-group">
+            <label class="form-label">Name</label>
+            <input type="text" class="form-input" placeholder="Your full name" />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Email</label>
+            <input type="email" class="form-input" placeholder="you@example.com" />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Message</label>
+            <textarea rows="5" class="form-input" placeholder="Tell me about your project..."></textarea>
+          </div>
+          <a href="mailto:ilyes.chellat@icloud.com" class="btn-primary" style="width:100%;justify-content:center;text-decoration:none">
+            Send Message
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="footer-name"><span style="color:#3b82f6">CH</span>ELLAT Ilyes</div>
+        <div class="footer-sub">Designed &amp; Built by CHELLAT Ilyes &mdash; Algeria</div>
+      </div>
+      <div class="footer-socials">
+        <a href="#" class="social-btn-sm" aria-label="Instagram"><svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+        <a href="#" class="social-btn-sm" aria-label="LinkedIn"><svg fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+        <a href="#" class="social-btn-sm" aria-label="GitHub"><svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a>
+        <a href="#" class="social-btn-sm" aria-label="Behance"><svg fill="currentColor" viewBox="0 0 24 24"><path d="M6.938 4.503c.702 0 1.34.06 1.92.188.577.13 1.07.33 1.485.61.41.28.733.65.96 1.12.225.47.34 1.05.34 1.73 0 .74-.17 1.36-.507 1.86-.338.5-.837.9-1.502 1.22.906.26 1.576.72 2.022 1.37.448.66.665 1.45.665 2.36 0 .75-.13 1.39-.41 1.93-.28.55-.67 1-1.16 1.35-.49.36-1.05.62-1.69.78-.63.17-1.29.25-1.96.25H0V4.51h6.938v-.007zm-.412 5.58c.585 0 1.058-.14 1.42-.42.36-.28.54-.72.54-1.31 0-.33-.06-.6-.18-.82-.12-.22-.29-.39-.5-.53-.21-.12-.44-.2-.71-.25-.26-.04-.53-.06-.82-.06H3.59v3.39h2.936zm.19 5.81c.32 0 .62-.03.9-.09s.52-.17.73-.32c.21-.15.38-.36.5-.62.12-.26.18-.6.18-1.01 0-.81-.23-1.39-.68-1.73-.46-.34-1.06-.51-1.82-.51H3.59v4.28h3.126zm9.783.27c.35.34.86.51 1.51.51.47 0 .87-.12 1.21-.35.34-.24.55-.49.63-.76h2.56c-.41 1.27-1.04 2.18-1.89 2.73-.85.55-1.88.82-3.09.82-.84 0-1.6-.13-2.28-.41-.68-.27-1.26-.66-1.73-1.16-.47-.5-.83-1.1-1.08-1.8-.25-.69-.38-1.46-.38-2.29 0-.8.13-1.55.39-2.24.26-.69.62-1.28 1.09-1.78.47-.5 1.04-.88 1.71-1.16.67-.28 1.41-.42 2.23-.42.91 0 1.71.18 2.38.52.67.35 1.22.82 1.65 1.41.43.59.74 1.27.93 2.04.19.77.25 1.58.18 2.43h-7.63c.04.74.26 1.29.61 1.62zm2.65-5.57c-.28-.31-.72-.46-1.32-.46-.38 0-.7.06-.96.19-.26.13-.47.29-.63.49-.16.2-.27.41-.33.63-.06.22-.1.43-.1.62h3.92c-.09-.64-.29-1.16-.58-1.47zM15.17 6.77h5.42v1.31h-5.42V6.77z"/></svg></a>
+      </div>
+      <div class="footer-copy">&copy; 2025 CHELLAT Ilyes. All rights reserved.</div>
+    </div>
+  </footer>
+
+</div><!-- /.site-wrap -->
+</body>
+</html>
